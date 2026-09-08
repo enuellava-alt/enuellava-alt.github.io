@@ -219,6 +219,41 @@ white-space: nowrap;
         }
     }
 </style>
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card h3 {
+    color: #123b63;
+    margin-bottom: 12px;
+}
+
+.portfolio-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.portfolio-card span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #123b63;
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 </head><body><nav>
     <div class="logo">Emmanuella A.</div>
@@ -329,6 +364,46 @@ white-space: nowrap;
         Explore examples of my work in administrative support, research,
         organization, content planning, and virtual assistance.
     </p>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+            <h3>Inbox Management</h3>
+            <p>
+                Organized and managed email inboxes using labels, folders,
+                categorization, and efficient email organization.
+            </p>
+            <span>Administrative Support</span>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>Calendar Management</h3>
+            <p>
+                Created and organized weekly schedules, helping clients
+                manage meetings, appointments, and priorities effectively.
+            </p>
+            <span>Executive Support</span>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>Content Planning</h3>
+            <p>
+                Developed organized social media content calendars with
+                post ideas, platforms, and scheduling plans.
+            </p>
+            <span>Content Planning</span>
+        </div>
+
+        <div class="portfolio-card">
+            <h3>Internet Research</h3>
+            <p>
+                Conducted online research to identify competitors, trends,
+                useful business tools, and relevant information.
+            </p>
+            <span>Research &amp; Organization</span>
+        </div>
+
+    </div>
 
 </section>
 
