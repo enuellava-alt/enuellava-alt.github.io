@@ -1,478 +1,803 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Emmanuella Akintola| Virtual Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    <title>Emmanuella A. | Virtual Assistant</title>
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f8fafc;
-        color: #1e293b;
-        line-height: 1.7;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    /* Navigation */
-    nav {
-        background: #ffffff;
-        padding: 20px 8%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-        color: #123b63;
-white-space: nowrap;
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
 
-    }
-
-    nav ul {
-        display: flex;
-        list-style: none;
-        gap: 28px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: #334155;
-        font-weight: 600;
-    }
-
-    nav ul li a:hover {
-        color: #1d6fa5;
-    }
-
-    /* Hero */
-    .hero {
-        min-height: 85vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 80px 20px;
-        background: linear-gradient(135deg, #eaf4fb, #ffffff);
-    }
-
-    .hero-content {
-        max-width: 800px;
-    }
-
-    .hero h1 {
-        font-size: 56px;
-        color: #123b63;
-        margin-bottom: 18px;
-    }
-
-    .hero h2 {
-        font-size: 25px;
-        color: #1d6fa5;
-        margin-bottom: 22px;
-        font-weight: 600;
-    }
-
-    .hero p {
-        font-size: 19px;
-        color: #475569;
-        max-width: 650px;
-        margin: 0 auto 32px;
-    }
-
-    .button {
-        display: inline-block;
-        padding: 14px 30px;
-        background: #123b63;
-        color: white;
-        text-decoration: none;
-        border-radius: 30px;
-        font-weight: bold;
-    }
-
-    .button:hover {
-        background: #1d6fa5;
-    }
-
-    /* General Sections */
-    section {
-        padding: 80px 8%;
-        max-width: 1100px;
-        margin: auto;
-    }
-
-    .section-title {
-        text-align: center;
-        color: #123b63;
-        font-size: 36px;
-        margin-bottom: 45px;
-    }
-
-    .about-text {
-        max-width: 800px;
-        margin: auto;
-        text-align: center;
-        font-size: 18px;
-        color: #475569;
-    }
-
-    /* Services */
-    .services {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-    }
-
-    .service-card {
-        background: white;
-        padding: 30px;
-        border-radius: 16px;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
-    }
-
-    .service-card h3 {
-        color: #123b63;
-        margin-bottom: 12px;
-        font-size: 20px;
-    }
-
-    .service-card p {
-        color: #64748b;
-    }
-
-    /* Why Work With Me */
-    .why {
-        background: #123b63;
-        color: white;
-        max-width: none;
-        text-align: center;
-    }
-
-    .why .section-title {
-        color: white;
-    }
-
-    .why p {
-        max-width: 750px;
-        margin: auto;
-        font-size: 18px;
-    }
-
-    /* Contact */
-    .contact {
-        text-align: center;
-    }
-
-    .contact p {
-        font-size: 18px;
-        color: #475569;
-        margin-bottom: 25px;
-    }
-
-    /* Footer */
-    footer {
-        background: #0b2945;
-        color: white;
-        text-align: center;
-        padding: 25px;
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
+        /* NAVIGATION */
 
         nav {
-            padding: 18px 5%;
+            background: #ffffff;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #123b63;
+            white-space: nowrap;
         }
 
         nav ul {
-            gap: 12px;
+            list-style: none;
+            display: flex;
+            gap: 28px;
         }
 
         nav ul li a {
-            font-size: 13px;
+            text-decoration: none;
+            color: #334155;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #123b63;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 7%;
+            background: linear-gradient(135deg, #eef6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 58px;
+            color: #123b63;
+            margin-bottom: 15px;
         }
 
         .hero h2 {
+            font-size: 27px;
+            font-weight: 600;
+            color: #315b7d;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #123b63;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 6px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            background: #1d527f;
+        }
+
+        .button-outline {
+            background: transparent;
+            color: #123b63;
+            border: 2px solid #123b63;
+        }
+
+        .button-outline:hover {
+            color: white;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #123b63;
+            margin-bottom: 18px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            text-align: center;
+            color: #64748b;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #475569;
+            margin-bottom: 18px;
+        }
+
+        /* SERVICES */
+
+        .services-grid {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 32px;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 25px rgba(18,59,99,0.07);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(18,59,99,0.12);
+        }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #123b63;
+            margin-bottom: 10px;
             font-size: 21px;
         }
 
-        .services {
-            grid-template-columns: 1fr;
+        .service-card p {
+            color: #64748b;
+            font-size: 15px;
         }
 
-        section {
-            padding: 60px 6%;
+        /* PORTFOLIO */
+
+        .portfolio {
+            background: white;
         }
-    }
-</style>
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 40px;
-}
 
-.portfolio-card {
-    position: relative;
-    background: #ffffff;
-    border: 1px solid #e6edf3;
-    border-radius: 18px;
-    padding: 32px;
-    min-height: 230px;
-    box-shadow: 0 10px 30px rgba(18, 59, 99, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .portfolio-grid {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
 
-.portfolio-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(18, 59, 99, 0.14);
-}
+        .portfolio-card {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 32px;
+            min-height: 250px;
+            box-shadow: 0 10px 30px rgba(18,59,99,0.08);
+            transition: 0.3s;
+            overflow: hidden;
+        }
 
-.portfolio-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: #123b63;
-    border-radius: 18px 0 0 18px;
-}
+        .portfolio-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 16px 35px rgba(18,59,99,0.14);
+        }
 
-.portfolio-card h3 {
-    color: #123b63;
-    font-size: 21px;
-    margin: 15px 0 12px;
-}
+        .portfolio-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #123b63;
+        }
 
-.portfolio-card p {
-    color: #5d6b78;
-    line-height: 1.7;
-    font-size: 15px;
-    margin-bottom: 22px;
-}
+        .portfolio-card h3 {
+            color: #123b63;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
 
-.portfolio-card span {
-    display: inline-block;
-    padding: 7px 13px;
-    border: 1px solid #dce6ee;
-    border-radius: 20px;
-    color: #123b63;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-}
+        .portfolio-card p {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
 
-@media (max-width: 600px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
+        .tag {
+            display: inline-block;
+            padding: 7px 13px;
+            border: 1px solid #d5e1ec;
+            border-radius: 20px;
+            color: #123b63;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
 
-    .portfolio-card {
-        padding: 26px;
-        min-height: auto;
-    }
-}
+        /* WHY WORK WITH ME */
 
-</head><body><nav>
-    <div class="logo">Emmanuella A.</div>
+        .why {
+            background: #eef6ff;
+        }
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+        .why-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
 
-<div class="hero" id="home">
-    <div class="hero-content">
+        .why-content p {
+            color: #475569;
+            font-size: 17px;
+        }
 
-        <h1>Hello, I'm Emmanuella.</h1>
+        .qualities {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
 
-        <h2>Virtual Assistant | Administrative & Executive Support</h2>
+        .quality {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            color: #123b63;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(18,59,99,0.07);
+        }
 
-        <p>
-            I help busy professionals stay organized, manage their
-            workload, and focus on what matters most through reliable
-            virtual assistance.
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            background: #123b63;
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #dbeafe;
+        }
+
+        .contact .button {
+            background: white;
+            color: #123b63;
+        }
+
+        .contact .button-outline {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0d2d4a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 75vh;
+                padding: 70px 5%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-card {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .button {
+                display: block;
+                max-width: 230px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">Emmanuella A.</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Hello, I'm Emmanuella.</h1>
+
+            <h2>
+                Virtual Assistant |
+                Administrative & Executive Support
+            </h2>
+
+            <p>
+                I help busy professionals stay organized, manage
+                everyday tasks, and keep their work running smoothly
+                through reliable virtual assistance.
+            </p>
+
+            <a href="#contact" class="button">
+                Let's Work Together
+            </a>
+
+            <a href="#portfolio" class="button button-outline">
+                View My Work
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+
+            <p>
+                I’m Emmanuella, a Virtual Assistant passionate about
+                organization, efficiency, and making work easier for
+                the people I support.
+            </p>
+
+            <p>
+                I provide administrative and executive support including
+                inbox management, calendar organization, research,
+                document organization, and other day-to-day tasks
+                that help professionals focus on what matters most.
+            </p>
+
+            <p>
+                I’m detail-oriented, willing to learn, and committed
+                to providing dependable support with professionalism
+                and care.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <h2 class="section-title">My Services</h2>
+
+        <p class="section-intro">
+            Practical virtual assistance designed to keep your work
+            organized, efficient, and moving forward.
         </p>
 
-        <a href="#contact" class="button">Work With Me</a>
+        <div class="services-grid">
 
-    </div>
-</div>
+            <div class="service-card">
 
-<section id="about">
+                <div class="service-icon">📧</div>
 
-    <h2 class="section-title">About Me</h2>
+                <h3>Inbox Management</h3>
 
-    <p class="about-text">
-        I am a detail-oriented and organized Virtual Assistant who enjoys
-        helping professionals manage their day-to-day tasks efficiently.
-        I am passionate about learning, solving problems, staying
-        organized, and providing dependable administrative support.
-    </p>
+                <p>
+                    Organizing emails, creating labels and folders,
+                    prioritizing messages, and helping keep your inbox
+                    under control.
+                </p>
 
-</section>
+            </div>
 
-<section id="services">
 
-    <h2 class="section-title">My Services</h2>
+            <div class="service-card">
 
-    <div class="services">
+                <div class="service-icon">📅</div>
 
-        <div class="service-card">
-            <h3>Administrative Support</h3>
-            <p>
-                Helping with everyday administrative tasks so you can
-                focus on higher-priority responsibilities.
-            </p>
+                <h3>Calendar Management</h3>
+
+                <p>
+                    Organizing schedules, appointments, meetings,
+                    reminders, and helping maintain a clear and
+                    productive calendar.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">📁</div>
+
+                <h3>Administrative Support</h3>
+
+                <p>
+                    Supporting everyday administrative tasks,
+                    document organization, file management, and
+                    other operational needs.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🔎</div>
+
+                <h3>Internet Research</h3>
+
+                <p>
+                    Conducting online research and presenting useful
+                    information in a clear, organized, and easy-to-use
+                    format.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">📊</div>
+
+                <h3>Content Planning</h3>
+
+                <p>
+                    Creating organized content calendars and helping
+                    plan social media content and publishing schedules.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">💻</div>
+
+                <h3>Executive Support</h3>
+
+                <p>
+                    Providing reliable assistance with organization,
+                    scheduling, research, communication, and other
+                    executive support tasks.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="service-card">
-            <h3>Inbox & Email Management</h3>
-            <p>
-                Keeping your inbox organized and helping you stay on top
-                of important messages.
-            </p>
+    </section>
+
+
+    <!-- PORTFOLIO -->
+
+    <section class="portfolio" id="portfolio">
+
+        <h2 class="section-title">My Portfolio</h2>
+
+        <p class="section-intro">
+            A selection of practical projects demonstrating my
+            organization, research, administrative, and virtual
+            assistance skills.
+        </p>
+
+
+        <div class="portfolio-grid">
+
+
+            <div class="portfolio-card">
+
+                <h3>Inbox Management</h3>
+
+                <p>
+                    Organized a sample professional inbox using
+                    folders, labels, categories, and a simple system
+                    for prioritizing messages.
+                </p>
+
+                <span class="tag">Email Management</span>
+                <span class="tag">Organization</span>
+
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <h3>Calendar Management</h3>
+
+                <p>
+                    Created a structured weekly calendar for a busy
+                    professional, including meetings, tasks,
+                    priorities, and dedicated work blocks.
+                </p>
+
+                <span class="tag">Scheduling</span>
+                <span class="tag">Google Calendar</span>
+
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <h3>Internet Research</h3>
+
+                <p>
+                    Researched companies, competitors, trends, and
+                    useful digital tools and organized the findings
+                    into an easy-to-review format.
+                </p>
+
+                <span class="tag">Research</span>
+                <span class="tag">Data Organization</span>
+
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <h3>Content Planning</h3>
+
+                <p>
+                    Developed a sample one-month social media content
+                    calendar with post ideas, platforms, content
+                    themes, and publishing dates.
+                </p>
+
+                <span class="tag">Content Planning</span>
+                <span class="tag">Social Media</span>
+
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <h3>Google Drive Organization</h3>
+
+                <p>
+                    Created a simple file organization system designed
+                    to make documents easier to find, manage, and
+                    maintain.
+                </p>
+
+                <span class="tag">File Management</span>
+                <span class="tag">Google Drive</span>
+
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <h3>Administrative Support</h3>
+
+                <p>
+                    Demonstrated a practical workflow for handling
+                    administrative tasks, organizing information, and
+                    supporting day-to-day business operations.
+                </p>
+
+                <span class="tag">Administration</span>
+                <span class="tag">Virtual Assistance</span>
+
+            </div>
+
         </div>
 
-        <div class="service-card">
-            <h3>Calendar Management</h3>
+    </section>
+
+
+    <!-- WHY WORK WITH ME -->
+
+    <section class="why">
+
+        <h2 class="section-title">Why Work With Me?</h2>
+
+        <div class="why-content">
+
             <p>
-                Organizing schedules, appointments, meetings, and
-                important deadlines.
+                I bring organization, attention to detail, reliability,
+                and a willingness to learn. My goal is simple:
+                to make your work easier, your processes smoother,
+                and your day more organized.
             </p>
+
+            <div class="qualities">
+
+                <span class="quality">Organized</span>
+
+                <span class="quality">Detail-Oriented</span>
+
+                <span class="quality">Reliable</span>
+
+                <span class="quality">Professional</span>
+
+                <span class="quality">Willing to Learn</span>
+
+            </div>
+
         </div>
 
-        <div class="service-card">
-            <h3>Internet Research</h3>
-            <p>
-                Finding, organizing, and presenting useful information
-                to support better decisions.
-            </p>
-        </div>
+    </section>
 
-        <div class="service-card">
-            <h3>Data Entry & Organization</h3>
-            <p>
-                Keeping information accurate, organized, and easy to
-                access.
-            </p>
-        </div>
 
-        <div class="service-card">
-            <h3>Content Planning</h3>
-            <p>
-                Helping organize content ideas and create simple,
-                structured content plans.
-            </p>
-        </div>
+    <!-- CONTACT -->
 
-    </div>
+    <section class="contact" id="contact">
 
-</section>
+        <h2 class="section-title">
+            Let's Work Together
+        </h2>
 
-<section id="portfolio">
+        <p>
+            Looking for a reliable Virtual Assistant to support
+            your work? I’d love to connect and discuss how I can help.
+        </p>
 
-    <h2 class="section-title">My Portfolio</h2>
+        <a
+            href="mailto:enuella.va@gmail.com"
+            class="button"
+        >
+            Contact Me
+        </a>
 
-    <p class="about-text">
-        Explore examples of my work in administrative support, research,
-        organization, content planning, and virtual assistance.
-    </p>
+        <a
+            href="https://www.linkedin.com/in/emmanuella-akintola-083a973aa"
+            target="_blank"
+            class="button button-outline"
+        >
+            View My LinkedIn
+        </a>
 
-    <div class="portfolio-grid">
+    </section>
 
-        <div class="portfolio-card">
-            <h3>Inbox Management</h3>
-            <p>
-                Organized and managed email inboxes using labels, folders,
-                categorization, and efficient email organization.
-            </p>
-            <span>Administrative Support</span>
-        </div>
 
-        <div class="portfolio-card">
-            <h3>Calendar Management</h3>
-            <p>
-                Created and organized weekly schedules, helping clients
-                manage meetings, appointments, and priorities effectively.
-            </p>
-            <span>Executive Support</span>
-        </div>
+    <!-- FOOTER -->
 
-        <div class="portfolio-card">
-            <h3>Content Planning</h3>
-            <p>
-                Developed organized social media content calendars with
-                post ideas, platforms, and scheduling plans.
-            </p>
-            <span>Content Planning</span>
-        </div>
+    <footer>
 
-        <div class="portfolio-card">
-            <h3>Internet Research</h3>
-            <p>
-                Conducted online research to identify competitors, trends,
-                useful business tools, and relevant information.
-            </p>
-            <span>Research &amp; Organization</span>
-        </div>
+        <p>
+            © 2026 Emmanuella Akintola.
+            All rights reserved.
+        </p>
 
-    </div>
-
-</section>
-
-<section class="why">
-
-    <h2 class="section-title">Why Work With Me?</h2>
-
-    <p>
-        I bring organization, attention to detail, reliability, and a
-        willingness to learn. My goal is simple: to make your work easier,
-        your processes smoother, and your day more organized.
-    </p>
-
-</section>
-
-<section class="contact" id="contact">
-
-    <h2 class="section-title">Let's Work Together</h2>
-
-    <p>
-        Looking for a reliable Virtual Assistant to support your work?
-    </p>
-
-    <a href="mailto:enuella.va@gmail.com" class="button">
-        Contact Me
-    </a>
-<a href="https://www.linkedin.com/in/emmanuella-akintola-083a973aa" target="_blank" class="button">
-    LinkedIn
-   </a>
-
-</section>
-
-<footer>
-    <p>© 2026 Emmanuella Akintola. All rights reserved.</p>
-</footer>
+    </footer>
 
 </body>
 </html>
