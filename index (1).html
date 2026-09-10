@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Emmanuella A. | Virtual Assistant</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1769aa;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #172033;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #1769aa;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      padding: 80px 8%;
+      background: linear-gradient(135deg, #eef7ff, #ffffff);
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text small {
+      color: #1769aa;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.15;
+      margin: 15px 0;
+      color: #132238;
+    }
+
+    .hero h1 span {
+      color: #1769aa;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      color: #536174;
+      margin-bottom: 30px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 13px 22px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary-btn {
+      background: #1769aa;
+      color: white;
+    }
+
+    .secondary-btn {
+      border: 1px solid #1769aa;
+      color: #1769aa;
+      background: white;
+    }
+
+    /* PROFILE PHOTO */
+    .hero-photo {
+      flex: 0 0 340px;
+      text-align: center;
+    }
+
+    .hero-photo img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 8px solid white;
+      box-shadow: 0 15px 40px rgba(23,105,170,0.18);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #132238;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #68758a;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #536174;
+      font-size: 17px;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(30,50,80,0.07);
+      border: 1px solid #e9eef5;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(23,105,170,0.12);
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      color: #1769aa;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #68758a;
+      font-size: 15px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      background: #f7f9fc;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .portfolio-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid #e4eaf2;
+      box-shadow: 0 8px 25px rgba(30,50,80,0.07);
+      transition: 0.3s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(23,105,170,0.13);
+    }
+
+    .portfolio-number {
+      color: #1769aa;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #132238;
+    }
+
+    .portfolio-card p {
+      color: #68758a;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .portfolio-tag {
+      display: inline-block;
+      background: #eef7ff;
+      color: #1769aa;
+      padding: 6px 11px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+
+    /* SKILLS */
+    .skills {
+      background: white;
+    }
+
+    .skills-list {
+      max-width: 850px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skill {
+      padding: 10px 17px;
+      background: #eef7ff;
+      color: #1769aa;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: linear-gradient(135deg, #1769aa, #124f82);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .contact a {
+      display: inline-block;
+      background: white;
+      color: #1769aa;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 8px;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #101b2d;
+      color: #b9c4d4;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 6%;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-photo {
+        flex: none;
+      }
+
+      .hero-photo img {
+        width: 230px;
+        height: 230px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .services-grid,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">Emmanuella A.</div>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <small>CONTENT & ADMINISTRATIVE VIRTUAL ASSISTANT</small>
+
+      <h1>
+        Hello, I'm <span>Emmanuella.</span>
+      </h1>
+
+      <p>
+        I help entrepreneurs and professionals stay organized,
+        productive and focused by providing reliable administrative,
+        executive and virtual support.
+      </p>
+
+      <div class="buttons">
+        <a class="primary-btn" href="#portfolio">View My Work</a>
+
+        <a class="secondary-btn"
+           href="mailto:enuella.va@gmail.com">
+          Contact Me
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <!-- Your professional photo will go here -->
+    <img src="file_00000000ff3881f48fd673c91daf3a40.png" alt="Emmanuella - Virtual Assistant">
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Professional support with organization and attention to detail.</p>
+    </div>
+
+    <div class="about-content">
+      <p>
+        I am a Virtual Assistant with a strong interest in administrative
+        support, organization, research, content planning and executive
+        assistance. I enjoy turning scattered tasks into organized systems
+        and helping busy professionals manage their time and responsibilities
+        more effectively.
+      </p>
+
+      <br>
+
+      <p>
+        My goal is to provide dependable support that allows clients to
+        focus on the work that matters most while I take care of the
+        details behind the scenes.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <h2>What I Can Help With</h2>
+      <p>Practical support designed to keep your work organized.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">📅</div>
+        <h3>Calendar Management</h3>
+        <p>
+          Scheduling meetings, organizing appointments,
+          managing priorities and reducing calendar conflicts.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📧</div>
+        <h3>Email & Inbox Management</h3>
+        <p>
+          Organizing inboxes, creating useful labels,
+          prioritizing messages and keeping communication organized.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📁</div>
+        <h3>File & Drive Organization</h3>
+        <p>
+          Creating clear folder structures and organizing
+          digital documents for easier access.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔎</div>
+        <h3>Internet Research</h3>
+        <p>
+          Conducting online research and presenting useful
+          information in a clear and organized format.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Content Planning</h3>
+        <p>
+          Creating structured content calendars and helping
+          businesses plan their social media content.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <h3>Administrative Support</h3>
+        <p>
+          Supporting daily operations through organization,
+          documentation, scheduling and task coordination.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+
+    <div class="section-title">
+      <h2>My Portfolio</h2>
+      <p>Examples of administrative and virtual assistance work.</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card">
+        <div class="portfolio-number">01 · CALENDAR MANAGEMENT</div>
+
+        <h3>Executive Calendar Scheduling</h3>
+
+        <p>
+          Created a structured calendar for a busy entrepreneur,
+          including meetings, focus periods, lunch breaks,
+          follow-ups and review sessions.
+        </p>
+
+        <span class="portfolio-tag">Google Calendar</span>
+        <span class="portfolio-tag">Scheduling</span>
+      </div>
+
+
+      <div class="portfolio-card">
+        <div class="portfolio-number">02 · RESEARCH</div>
+
+        <h3>Productivity Tools Research</h3>
+
+        <p>
+          Conducted comparative research on productivity tools
+          for entrepreneurs and organized the findings into
+          a professional research report.
+        </p>
+
+        <span class="portfolio-tag">Research</span>
+        <span class="portfolio-tag">Report Writing</span>
+      </div>
+
+
+      <div class="portfolio-card">
+        <div class="portfolio-number">03 · EMAIL MANAGEMENT</div>
+
+        <h3>Inbox Organization System</h3>
+
+        <p>
+          Designed an organized Gmail inbox using labels for
+          clients, finance, research, meetings, follow-ups,
+          urgent messages and personal communication.
+        </p>
+
+        <span class="portfolio-tag">Gmail</span>
+        <span class="portfolio-tag">Organization</span>
+      </div>
+
+
+      <div class="portfolio-card">
+        <div class="portfolio-number">04 · FILE MANAGEMENT</div>
+
+        <h3>Google Drive Organization</h3>
+
+        <p>
+          Created a structured digital filing system with folders
+          for client files, invoices, reports, research, meeting
+          notes, ongoing projects and SOPs.
+        </p>
+
+        <span class="portfolio-tag">Google Drive</span>
+        <span class="portfolio-tag">File Management</span>
+      </div>
+
+
+      <div class="portfolio-card">
+        <div class="portfolio-number">05 · CONTENT PLANNING</div>
+
+        <h3>Weekly Content Calendar</h3>
+
+        <p>
+          Developed a content calendar for NexaCode Technologies
+          covering content themes, platforms, post types,
+          captions, calls-to-action and publishing status.
+        </p>
+
+        <span class="portfolio-tag">Content Planning</span>
+        <span class="portfolio-tag">Social Media</span>
+      </div>
+
+
+      <div class="portfolio-card">
+        <div class="portfolio-number">06 · ADMINISTRATIVE SUPPORT</div>
+
+        <h3>Meeting & Documentation Support</h3>
+
+        <p>
+          Organized meeting-related information and documentation
+          to support clear communication, follow-ups and efficient
+          administrative processes.
+        </p>
+
+        <span class="portfolio-tag">Documentation</span>
+        <span class="portfolio-tag">Admin Support</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+  <section class="skills">
+
+    <div class="section-title">
+      <h2>Tools & Skills</h2>
+      <p>Tools I use to stay organized and productive.</p>
+    </div>
+
+    <div class="skills-list">
+
+      <span class="skill">Google Docs</span>
+      <span class="skill">Google Sheets</span>
+      <span class="skill">Google Calendar</span>
+      <span class="skill">Gmail</span>
+      <span class="skill">Google Drive</span>
+      <span class="skill">Canva</span>
+      <span class="skill">Trello</span>
+      <span class="skill">Asana</span>
+      <span class="skill">ClickUp</span>
+      <span class="skill">Monday.com</span>
+      <span class="skill">Slack</span>
+      <span class="skill">Internet Research</span>
+      <span class="skill">Content Planning</span>
+      <span class="skill">Administrative Support</span>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <h2>Let's Work Together</h2>
+
+    <p>
+      Looking for a reliable Virtual Assistant to support
+      your business or daily operations?
+    </p>
+
+    <a href="mailto:enuella.va@gmail.com">
+      Email Me
+    </a>
+
+    <a href="https://www.linkedin.com/in/emmanuella-akintola-083a973aa"
+       target="_blank">
+      LinkedIn
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Emmanuella A. · Content & Administrative Virtual Assistant
+  </footer>
+
+</body>
+</html>
